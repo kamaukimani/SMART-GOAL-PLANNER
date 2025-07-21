@@ -1,20 +1,8 @@
-const BASE_URL = 'http://localhost:3000/goals';
+import axios from 'axios';
 
-export const fetchGoals = () => fetch(BASE_URL).then(res => res.json());
+const API_URL = 'http://localhost:3000/goals';
 
-export const createGoal = (goal) =>
-  fetch(BASE_URL, {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify(goal),
-  });
-
-export const updateGoal = (id, updates) =>
-  fetch(`${BASE_URL}/${id}`, {
-    method: 'PATCH',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify(updates),
-  });
-
-export const deleteGoal = (id) =>
-  fetch(`${BASE_URL}/${id}`, { method: 'DELETE' });
+export const getGoals = () => axios.get(API_URL);
+export const createGoal = (goal) => axios.post(API_URL, goal);
+export const updateGoal = (id, updates) => axios.patch(`${API_URL}/${id}`, updates);
+export const deleteGoal = (id) => axios.delete(`${API_URL}/${id}`);
