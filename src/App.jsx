@@ -19,7 +19,7 @@ function App() {
 
   return (
     <div style={{ padding: '2rem' }}>
-      <h1>🎯 Smart Goal Planner</h1>
+      <h1>SMART GOAL PLANNER </h1>
       <Overview goals={goals} />
       <AddGoalForm onGoalAdded={fetchGoals} />
       <DepositForm goals={goals} onDeposit={fetchGoals} />
