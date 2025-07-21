@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react';
-import { getGoals } from './Services/api';
-import AddGoalForm from './Componenets/AddGoalForm';
-import GoalCard from './Componenets/GoalCard';
+import { getGoals } from './services/api';
+import AddGoalForm from './components/AddGoalForm';
+import GoalCard from './components/GoalCard';
 import DepositForm from './components/DepositForm';
-import Overview from './Componenets/GoalOverview';
+import Overview from './components/GoalOverview';
 
 function App() {
   const [goals, setGoals] = useState([]);
