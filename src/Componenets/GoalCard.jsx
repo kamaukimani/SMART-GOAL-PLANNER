@@ -1,4 +1,4 @@
-import { deleteGoal } from '../services/api';
+import { deleteGoal } from "../Services/api"
 
 const GoalCard = ({ goal, onChange }) => {
   const { id, name, targetAmount, savedAmount, category, deadline } = goal;

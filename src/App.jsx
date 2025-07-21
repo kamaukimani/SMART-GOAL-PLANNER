@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { getGoals } from './services/api';
+import { getGoals } from './Services/api';
 import AddGoalForm from './Componenets/AddGoalForm';
 import GoalCard from './Componenets/GoalCard';
 import DepositForm from './components/DepositForm';
